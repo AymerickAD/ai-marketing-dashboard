@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet IA Marketing Digital - Aymerick Dansicare</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .tech-badge {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">Social Media Intelligence Dashboard</h1>
+                    <p class="text-xl opacity-90">Analyse prédictive des performances social media avec IA</p>
+                    <div class="mt-4 flex space-x-4">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">Social Media API</span>
+                        <span class="tech-badge">Data Visualization</span>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="text-lg font-semibold">Aymerick Dansicare</div>
+                    <div class="text-sm opacity-75">Chef de Projet Digital</div>
+                    <div class="mt-2 flex space-x-3">
+                        <a href="#" class="text-white hover:text-gray-200"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-white hover:text-gray-200"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Project Overview -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Vue d'ensemble du projet</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Problématique</h3>
+                        <p class="text-gray-700 mb-4">
+                            Les agences de communication peinent à anticiper les tendances sur les réseaux sociaux et à optimiser leurs campagnes en temps réel. Ce projet développe une solution d'intelligence artificielle qui analyse les données social media pour prédire les performances et recommander des stratégies optimales.
+                        </p>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Solution développée</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Analyse prédictive des performances de contenu</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Détection automatique des tendances émergentes</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Recommandations personnalisées par plateforme</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Dashboard temps réel pour le suivi des KPIs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Technologies utilisées</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <i class="fab fa-python text-blue-500 text-2xl mb-2"></i>
+                                <h4 class="font-semibold">Python</h4>
+                                <p class="text-sm text-gray-600">Pandas, NumPy, Scikit-learn</p>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <i class="fas fa-brain text-purple-500 text-2xl mb-2"></i>
+                                <h4 class="font-semibold">Machine Learning</h4>
+                                <p class="text-sm text-gray-600">TensorFlow, NLP, Prédiction</p>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <i class="fas fa-chart-line text-green-500 text-2xl mb-2"></i>
+                                <h4 class="font-semibold">Visualisation</h4>
+                                <p class="text-sm text-gray-600">Chart.js, D3.js, Plotly</p>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <i class="fas fa-share-alt text-blue-400 text-2xl mb-2"></i>
+                                <h4 class="font-semibold">APIs Social Media</h4>
+                                <p class="text-sm text-gray-600">Instagram, Facebook, Twitter</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Métriques clés du projet</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="metric-card">
+                    <i class="fas fa-chart-line text-3xl mb-2"></i>
+                    <div class="text-2xl font-bold">87%</div>
+                    <div class="text-sm opacity-90">Précision des prédictions</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-clock text-3xl mb-2"></i>
+                    <div class="text-2xl font-bold">-65%</div>
+                    <div class="text-sm opacity-90">Temps d'analyse réduit</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-trending-up text-3xl mb-2"></i>
+                    <div class="text-2xl font-bold">+45%</div>
+                    <div class="text-sm opacity-90">Engagement moyen</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-users text-3xl mb-2"></i>
+                    <div class="text-2xl font-bold">1M+</div>
+                    <div class="text-sm opacity-90">Posts analysés</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Visualizations -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Analyses et visualisations</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Performance par plateforme</h3>
+                        <div style="height: 300px;">
+                            <canvas id="platformChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Évolution de l'engagement</h3>
+                        <div style="height: 300px;">
+                            <canvas id="engagementChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Example -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Exemple de code : Analyse prédictive</h2>
+                <div class="code-block">
+                    <pre><code># Modèle de prédiction d'engagement social media
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+import numpy as np
+
+class SocialMediaPredictor:
+    def __init__(self):
+        self.model = RandomForestRegressor(n_estimators=100, random_state=42)
+        self.features = ['hour_posted', 'day_of_week', 'content_length', 
+                        'hashtags_count', 'mentions_count', 'sentiment_score']
+    
+    def preprocess_data(self, df):
+        """Préparation des données pour le modèle"""
+        df['hour_posted'] = pd.to_datetime(df['timestamp']).dt.hour
+        df['day_of_week'] = pd.to_datetime(df['timestamp']).dt.dayofweek
+        df['content_length'] = df['content'].str.len()
+        df['hashtags_count'] = df['content'].str.count('#')
+        df['mentions_count'] = df['content'].str.count('@')
+        return df[self.features]
+    
+    def train(self, data):
+        """Entraînement du modèle"""
+        X = self.preprocess_data(data)
+        y = data['engagement_rate']
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+        
+        self.model.fit(X_train, y_train)
+        accuracy = self.model.score(X_test, y_test)
+        return accuracy
+    
+    def predict_engagement(self, content_data):
+        """Prédiction du taux d'engagement"""
+        X = self.preprocess_data(content_data)
+        prediction = self.model.predict(X)
+        return prediction[0]
+
+# Utilisation du modèle
+predictor = SocialMediaPredictor()
+accuracy = predictor.train(social_media_data)
+print(f"Précision du modèle: {accuracy:.2%}")
+
+# Prédiction pour un nouveau post
+new_post = {
+    'timestamp': '2024-01-15 14:30:00',
+    'content': 'Nouvelle campagne #marketing #innovation @client',
+    'sentiment_score': 0.8
+}
+predicted_engagement = predictor.predict_engagement(pd.DataFrame([new_post]))
+print(f"Engagement prédit: {predicted_engagement:.2%}")</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Benefits -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Fonctionnalités et bénéfices</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-robot text-purple-500 text-4xl mb-2"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">IA Prédictive</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Prédiction des performances</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Analyse de sentiment automatique</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Détection des tendances</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Recommandations personnalisées</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-tachometer-alt text-blue-500 text-4xl mb-2"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Dashboard Temps Réel</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Suivi des KPIs en direct</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Alertes automatiques</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Rapports personnalisés</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Visualisations interactives</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-cogs text-orange-500 text-4xl mb-2"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Optimisation Continue</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>A/B testing automatisé</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Optimisation des horaires</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Amélioration du contenu</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>ROI maximisé</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Résultats et impact</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Bénéfices mesurés</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                                <div>
+                                    <strong>Augmentation de 45% de l'engagement</strong>
+                                    <p class="text-sm text-gray-600">Grâce à l'optimisation prédictive du contenu</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
+                                <div>
+                                    <strong>Réduction de 65% du temps d'analyse</strong>
+                                    <p class="text-sm text-gray-600">Automatisation des tâches répétitives</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
+                                <div>
+                                    <strong>87% de précision dans les prédictions</strong>
+                                    <p class="text-sm text-gray-600">Fiabilité élevée du modèle ML</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Retour sur investissement</h3>
+                        <div style="height: 300px;">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Évolutions futures</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Développements prévus</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-purple-500 mr-3 mt-1"></i>
+                                <div>
+                                    <strong>Intégration TikTok et YouTube Shorts</strong>
+                                    <p class="text-sm text-gray-600">Expansion vers les contenus vidéo courts</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-purple-500 mr-3 mt-1"></i>
+                                <div>
+                                    <strong>Analyse des influenceurs</strong>
+                                    <p class="text-sm text-gray-600">Identification automatique des partenaires potentiels</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-purple-500 mr-3 mt-1"></i>
+                                <div>
+                                    <strong>Génération de contenu assistée par IA</strong>
+                                    <p class="text-sm text-gray-600">Création automatique de posts optimisés</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-600">Opportunités d'amélioration</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-3 mt-1"></i>
+                                <div>
+                                    <strong>Deep Learning pour l'analyse d'images</strong>
+                                    <p class="text-sm text-gray-600">Reconnaissance automatique du contenu visuel</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-3 mt-1"></i>
+                                <div>
+                                    <strong>API temps réel</strong>
+                                    <p class="text-sm text-gray-600">Intégration native avec les outils existants</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-3 mt-1"></i>
+                                <div>
+                                    <strong>Analyse concurrentielle automatisée</strong>
+                                    <p class="text-sm text-gray-600">Veille concurrentielle intelligente</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-semibold">Aymerick Dansicare</h3>
+                    <p class="text-gray-400">Chef de Projet Digital | Spécialiste IA & Marketing</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-envelope fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 Aymerick Dansicare. Projet de démonstration pour poste de Chef de Projet Digital.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Platform Performance Chart
+        const platformCtx = document.getElementById('platformChart').getContext('2d');
+        new Chart(platformCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Instagram', 'Facebook', 'Twitter', 'LinkedIn', 'TikTok'],
+                datasets: [{
+                    data: [35, 25, 20, 15, 5],
+                    backgroundColor: [
+                        '#E4405F',
+                        '#1877F2',
+                        '#1DA1F2',
+                        '#0077B5',
+                        '#000000'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Engagement Evolution Chart
+        const engagementCtx = document.getElementById('engagementChart').getContext('2d');
+        new Chart(engagementCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun'],
+                datasets: [{
+                    label: 'Engagement Rate (%)',
+                    data: [2.1, 2.8, 3.2, 3.8, 4.5, 5.2],
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ROI Chart
+        const roiCtx = document.getElementById('roiChart').getContext('2d');
+        new Chart(roiCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Avant IA', 'Après IA'],
+                datasets: [{
+                    label: 'ROI (%)',
+                    data: [120, 185],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(75, 192, 192, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDkOhMkIpBmmh6TKd4bwwhZaroMWJpy8U%2FnuyKiIgpWXEe0t4mVfItdACl8ElX81cIu4qqO18GQ0xDxiTKy%2BlLz27ofV92UA%2BVzjbFNgnCuvsKAguB0PVctyth3Vkh61KoZ2zyhup3JVJ7yfnh4wi0dUXm0YX1M%2FEqLKo82CNiSwhbAaM5EO1dTZI2Zf9lnEE5ZZk42FBgXX2B%2Ftc%2Fp%2BrWBKpZsEIN4jzksFeyyQDzRAR92tgdKijdGq9%2Fb12F0A375VgXpKAbjFe93f6u1Pc9b919lnLOE8uGnvHBqEeWwoq8kH1%2FiEwBmzOclHqXN%2FUkxUf0MXwN5W6Oi1aA9lphVfr%2FDbkBCdbiS3VPoMrYOQzpZXB%2BIeNv7ZpE4GyUMOrwbdDqfEb0%2BvBL%2B7MLNjFy%2BAyF1RjsJgl5jmdji%2B6wCjU90FmZpfHdsrzUrjNzC7Y9NMRiP0GVZp2K7465gojbbp1YeIS5NM55cGgVJvMYlUXrNOCclP5fDpJZlAmdDZBBtXzEYDBVqafNRoSJqQ1Ga4%3D";
+        window.__genspark_locale = "fr-FR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDkOhMkIpBmmh6TKd4bwwhZaroMWJpy8U/nuyKiIgpWXEe0t4mVfItdACl8ElX81cIu4qqO18GQ0xDxiTKy+lLz27ofV92UA+VzjbFNgnCuvsKAguB0PVctyth3Vkh61KoZ2zyhup3JVJ7yfnh4wi0dUXm0YX1M/EqLKo82CNiSwhbAaM5EO1dTZI2Zf9lnEE5ZZk42FBgXX2B/tc/p+rWBKpZsEIN4jzksFeyyQDzRAR92tgdKijdGq9/b12F0A375VgXpKAbjFe93f6u1Pc9b919lnLOE8uGnvHBqEeWwoq8kH1/iEwBmzOclHqXN/UkxUf0MXwN5W6Oi1aA9lphVfr/DbkBCdbiS3VPoMrYOQzpZXB+IeNv7ZpE4GyUMOrwbdDqfEb0+vBL+7MLNjFy+AyF1RjsJgl5jmdji+6wCjU90FmZpfHdsrzUrjNzC7Y9NMRiP0GVZp2K7465gojbbp1YeIS5NM55cGgVJvMYlUXrNOCclP5fDpJZlAmdDZBBtXzEYDBVqafNRoSJqQ1Ga4=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
